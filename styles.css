@@ -24,6 +24,8 @@
   --dev-tint:     rgba(74,203,143,0.12);
   --ai:           #A98CF5;
   --ai-tint:      rgba(169,140,245,0.13);
+  --network:      #5FD4A8;
+  --network-tint: rgba(95,212,168,0.13);
   --success:      #4ACB8F;
   --success-tint: rgba(74,203,143,0.12);
   --title-purple: #BE9CFB;
@@ -85,7 +87,6 @@ svg{ flex-shrink: 0; }
   font-family: var(--font-mono); font-size:0.85rem;
 }
 .skip-link:focus{ left:12px; top:12px; }
-
 /* ---- page-load intro ---- */
 .page-loader{
   position: fixed; inset: 0; z-index: 999;
@@ -105,7 +106,6 @@ svg{ flex-shrink: 0; }
 .loader-fill{ display:block; height:100%; width:40%; background: linear-gradient(90deg, var(--signal), var(--ai)); animation: loader-slide 1s ease-in-out infinite; }
 @keyframes loader-pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.55; } }
 @keyframes loader-slide{ 0%{ transform: translateX(-120%); } 100%{ transform: translateX(360%); } }
-
 .reveal-load{
   opacity: 0;
   transform: translateY(16px);
@@ -113,7 +113,6 @@ svg{ flex-shrink: 0; }
   animation-delay: calc(var(--d, 0) * .12s + .15s);
 }
 @keyframes load-in{ to{ opacity:1; transform:translateY(0); } }
-
 .section-inner{
   max-width: var(--max);
   margin: 0 auto;
@@ -545,8 +544,6 @@ svg{ flex-shrink: 0; }
   animation: pulse 2.4s infinite;
   flex-shrink: 0;
 }
-
-
 .skillset{
   position: relative;
   padding: 100px 0;
@@ -751,7 +748,6 @@ svg{ flex-shrink: 0; }
 .card-ai:hover{ border-color: var(--ai); }
 .card-cloud{ border-top-color: var(--cloud); }
 .card-cloud:hover{ border-color: var(--cloud); }
-
 /* ---- project card media: blueprint panel, no floating app-icon-in-white-box ---- */
 .card-media{
   height: 148px;
@@ -949,8 +945,8 @@ svg{ flex-shrink: 0; }
 .module-security .module-icon{ background: var(--security-tint); color: var(--security); }
 .module-dev .module-icon{ background: var(--dev-tint); color: var(--dev); }
 .module-ai .module-icon{ background: var(--ai-tint); color: var(--ai); }
+.module-network .module-icon{ background: var(--network-tint); color: var(--network); }
 .module-tags{ display:flex; gap:8px; flex-wrap:wrap; }
-
 /* ---- Certifications ---- */
 .cert-grid{
   display:grid;
@@ -1021,7 +1017,6 @@ svg{ flex-shrink: 0; }
   border-top: 1px dashed var(--line);
 }
 .cert-card-static{ opacity: 0.85; }
-
 .contact{ text-align:center; }
 .contact .section-lede{ margin: 0 auto 48px; }
 .contact .section-eyebrow{ display:block; }

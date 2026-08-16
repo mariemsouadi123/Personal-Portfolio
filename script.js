@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // fallback in case 'load' already fired
   setTimeout(() => loader?.classList.add('is-done'), 2500);
-
   /* ---- footer year ---- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
   /* ---- nav: scroll shadow + mobile toggle ---- */
   const nav = document.getElementById('siteNav');
   const navToggle = document.getElementById('navToggle');
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
   /* ---- typed rotator line ---- */
   const typedEl = document.getElementById('typedText');
   const phrases = [
@@ -75,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     tick();
   }
-
   /* ---- stat cards: tap-to-reveal detail on touch devices ---- */
   const statCards = document.querySelectorAll('.workflow-node');
   statCards.forEach(card => {
@@ -90,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
       statCards.forEach(c => c.classList.remove('is-open'));
     }
   });
-
   /* ---- animated stat counters (hero) ---- */
   const counters = document.querySelectorAll('.wf-value[data-count], .wf-value[data-text]');
   const animateCounter = (el) => {
@@ -123,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     counters.forEach(el => counterObserver.observe(el));
   }
-
   /* ---- scroll reveal for skill cloud + generic .reveal elements ---- */
   document.querySelectorAll('.skillset-cloud .cw').forEach(el => el.classList.add('reveal'));
   const revealTargets = document.querySelectorAll('.reveal');
